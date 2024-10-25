@@ -381,60 +381,24 @@
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried C:\Users\Admin\.ivy2\local\org.scala-lang\scala-library\2.11.12\srcs\scala-library-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.12!scala-library.jar(src) (1054ms)
-[debug] 		tried C:\Users\Admin\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.4\srcs\scala-parser-combinators_2.11-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(src) (967ms)
-[debug] 		tried C:\Users\Admin\.ivy2\local\org.scala-lang\scala-reflect\2.11.12\srcs\scala-reflect-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.12!scala-reflect.jar(src) (1039ms)
-[debug] 		tried C:\Users\Admin\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.5\srcs\scala-xml_2.11-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.5!scala-xml_2.11.jar(src) (964ms)
-[debug] 		tried C:\Users\Admin\.ivy2\local\org.scala-lang\scala-compiler\2.11.12\srcs\scala-compiler-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.12!scala-compiler.jar(src) (1216ms)
-[debug] 		tried C:\Users\Admin\.ivy2\local\jline\jline\2.14.3\srcs\jline-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3-sources.jar
-[info] downloading https://repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3-sources.jar
-[info] 	[SUCCESSFUL ] jline#jline;2.14.3!jline.jar(src) (929ms)
-[debug] :: resolution report :: resolve 169ms :: artifacts dl 6195ms
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT compile produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-compile.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT runtime produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-runtime.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT test produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-test.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT provided produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-provided.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT optional produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-optional.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT compile-internal produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-compile-internal.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT runtime-internal produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-runtime-internal.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT test-internal produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-test-internal.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT plugin produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-plugin.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT sources produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-sources.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT docs produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-docs.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT pom produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-pom.xml
-[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT scala-tool produced in C:\Users\Admin\Desktop\Restart\Test\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-scala-tool.xml
-[debug] 	resolve done (169ms resolve - 6195ms download)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.12!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.12!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.5!scala-xml_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.12!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.3!jline.jar(src)
+[debug] :: resolution report :: resolve 139ms :: artifacts dl 31ms
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT compile produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-compile.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT runtime produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-runtime.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT test produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-test.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT provided produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-provided.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT optional produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-optional.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT compile-internal produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-compile-internal.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT runtime-internal produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-runtime-internal.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT test-internal produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-test-internal.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT plugin produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-plugin.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT sources produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-sources.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT docs produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-docs.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT pom produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-pom.xml
+[debug] 	report for test#test$sources_2.11;0.1.0-SNAPSHOT scala-tool produced in C:\Users\Admin\Desktop\Restart\SeekhoBigdataLearning\target\scala-2.11\resolution-cache\reports\test-test$sources_2.11-scala-tool.xml
+[debug] 	resolve done (139ms resolve - 31ms download)
