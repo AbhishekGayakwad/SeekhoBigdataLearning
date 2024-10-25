@@ -30,5 +30,15 @@ object First {
 
     }
       println("hello World from screen 2")
+
+
+    var array = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    array.foreach(println)
+    println(array(0))
+    val len = array.length
+    println(s"the length of array is " + len)
+    for (i <- 0 until len) {
+      println(array(i))
+    }
   }
 }
