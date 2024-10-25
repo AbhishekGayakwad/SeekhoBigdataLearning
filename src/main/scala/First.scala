@@ -15,12 +15,20 @@ object First {
     {
       println("Not Equal")
     }
-    for (i<-1 to 10){
+    for (i <- 1 to 10 by 2) {
       println(i)
     }
-    for (i<-1 until 10){
+    for (i <- 1 until 10 by 2) {
       println(i)
     }
+
+    var z = 1
+    while (z <= 10) {
+      println(z)
+      z = z + 1
+
+    }
+
 
   }
 }
