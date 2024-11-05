@@ -41,5 +41,4 @@ object First {
       println(array(i))
     }
   }
-  println(" again trying to updat a code which not matching with master hello World from screen 2")
 }
