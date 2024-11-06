@@ -25,9 +25,6 @@ object Question14 {
       ("nishad", 75000, 200000, 540)
     ).toDF("name", "income", "loan_amount", "credit_score")
 
-
-
-
     val df = loanApplicants.select(col("name"),col("income"),col("loan_amount"),col("credit_score"),
       when(col("loan_amount")>= col("income")*2 && col("credit_score") < 600,"High Risk")
         .when((col("loan_amount")>= col("income") && col("loan_amount")<=col("income") *2)
@@ -36,8 +33,7 @@ object Question14 {
     )
 
     val df2 = df.groupBy(col("Risk Classification")).agg(count(col("name")).alias("count"))
-    df2.show()
-
+    //df2.show()
 
     val df3 = df.filter(col("Risk Classification").equalTo("High Risk"))
       .select(col("name"),col("income"),col("loan_amount"),col("credit_score"),
@@ -45,17 +41,74 @@ object Question14 {
     .when(col("income")>=50000 && col("income")<=100000,"50-100k")
           .otherwise(">100k").alias("incomerange")).groupBy(col("incomerange")).agg(avg(col("loan_amount")))
 
-    df3.show()
-
+    //df3.show()
 
     val df4 = df.select(col("name"),col("income"),col("loan_amount"),col("credit_score"),
       when(col("income")<50000,"<50K")
       .when(col("income")>=50000 && col("income")<=100000,"50-100k")
         .otherwise(">100k").alias("incomerange")).groupBy(col("incomerange")).agg(avg(col("credit_score")))
 
-    df4.show()
+    //df4.show()
+
+    loanApplicants.createOrReplaceTempView("temp")
 
 
+
+    val sdf = spark.sql(
+      """
+          select name, income, loan_amount, credit_score,
+          case when loan_amount >= income*2 and credit_score < 600 then "High Risk"
+          when (loan_amount >= income and loan_amount >= income *2) and (credit_score >= 600
+           and credit_score <= 700 )then "Moderate Risk"
+           else "Low Risk" end as RiskClassification
+           from temp
+        """)
+    //sdf.show()
+
+    sdf.createOrReplaceTempView("temp1")
+    //val df2 = df.groupBy(col("Risk Classification")).agg(count(col("name")).alias("count"))
+
+    val sdf2 = spark.sql(
+      """select RiskClassification, count(name) as count from temp1
+        group by RiskClassification
+        """)
+    //sdf2.show()
+
+
+
+
+
+//    val df3 = df.filter(col("Risk Classification").equalTo("High Risk"))
+//      .select(col("name"),col("income"),col("loan_amount"),col("credit_score"),
+//        when(col("income")<50000,"<50K")
+//          .when(col("income")>=50000 && col("income")<=100000,"50-100k")
+//          .otherwise(">100k").alias("incomerange")).groupBy(col("incomerange")).agg(avg(col("loan_amount")))
+
+    val sdf3 = spark.sql(
+      """select incomerange, avg(loan_amount) from (select loan_amount,case when income < 50000 then '<50K'
+         when income >= 50000 and income <=100000 then '50-100k'
+          else ">100k" end as incomerange from temp1 where RiskClassification='High Risk'
+          )  group by incomerange
+        """)
+0
+   // sdf3.show()
+
+//
+//    val df4 = df.select(col("name"),col("income"),col("loan_amount"),col("credit_score"),
+//      when(col("income")<50000,"<50K")
+//        .when(col("income")>=50000 && col("income")<=100000,"50-100k")
+//        .otherwise(">100k").alias("incomerange")).groupBy(col("incomerange")).agg(avg(col("credit_score")))
+
+
+
+    val sdf4 = spark.sql(
+      """select incomerange, avg(credit_score) from (select credit_score,loan_amount,case when income < 50000 then '<50K'
+         when income >= 50000 and income <=100000 then '50-100k'
+          else ">100k" end as incomerange from temp1 where RiskClassification='High Risk'
+          )  group by incomerange
+        """)
+
+    sdf4.show()
 //    1. Classify loan applicants as "High Risk" if the loan amount exceeds twice their income and
 //      credit score is below 600, "Moderate Risk" if the loan amount is between 1-2 times their
 //    income and credit score between 600-700, and "Low Risk" otherwise. Find the total count of
