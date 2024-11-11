@@ -1,5 +1,5 @@
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{avg, col, count, date_format, max, min, sum, to_date, unix_timestamp}
+import org.apache.spark.sql.functions.{avg, col, count, date_format, dayofweek, max, min, sum, to_date, unix_timestamp, when}
 
 object Groupby9 {
   def main(args: Array[String]): Unit = {
@@ -20,7 +20,9 @@ object Groupby9 {
         ("2023-04-14","2","500")
       ).toDF("orderDate","customerId","amount")
 
-    val rs = df.groupBy(col("customerId"),col("city")).agg(count(col("orderId")))
+    val rs = df.withColumn("weekdayOrWeekend",dayofweek(col("orderDate")))
+      .select(col("amount"),when(col("weekdayOrWeekend")>=6 && col("weekdayOrWeekend")<=7,"Weekend")
+        .otherwise("Weekday").alias("newcol")).groupBy(col("newcol")).agg(avg(col("amount")))
 
     rs.show()
 
