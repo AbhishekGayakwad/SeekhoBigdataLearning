@@ -4,7 +4,7 @@
 		module="test$sources_2.11"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20241017082553"
+		publication="20241025161748"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
