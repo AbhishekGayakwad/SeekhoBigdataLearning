@@ -24,21 +24,7 @@ import java.util.{Calendar, Date}
       import spark.implicits._
       val df = Seq(("2024-01-01")).toDF("date")
 
-      val dateToIncrease = 30
 
-      def getWeek(c:String):String={
-        val d = c.toInt
-        d match {
-          case 1 => return "Sunday"
-          case 2 => return "Monday"
-          case 3 => return "Tuesday"
-          case 4 => return "Wednesday"
-          case 5 => return "Thursday"
-          case 6 => return "Friday"
-          case 7 => return "Saturday"
-          case _ => return "Invalid day"
-        }
-      }
 
       def getNumberofBusDay1(dateToIncrease:Int,x:Date):Date= {
         val cal = Calendar.getInstance()
